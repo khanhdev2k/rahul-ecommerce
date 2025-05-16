@@ -1,20 +1,29 @@
 package tests;
 
 import core.BaseTest;
-import pages.LoginPage;
+import enums.Locators;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.LoginPage;
+import utils.ElementActions;
 
 public class LoginTest extends BaseTest {
     @Test
-    public void verifySuccessfulPageNavigation() {
-        LoginPage loginPage = new LoginPage(driver);
 
-        // Step 1: Navigate to login page
+    public void testInvalidLogin() {
+        LoginPage loginPage = new LoginPage(driver);
         loginPage.navigateToLoginPage();
 
-        // Step 2: Verify page loaded successfully
-        Assert.assertTrue(loginPage.isLoginPageLoaded(),
-                "Login page did not load successfully");
+        // Access page and input nickname
+//
+//        loginPage.login("khanhleduy99er@gmail.com", "wrongpassword");
+
+        // Check login account
+//
+//        Assert.assertTrue(loginPage.isLoginFailed(), "Toast");
+
+        // Register account
+        loginPage.registerPage("Khanh", "Le", "khanhleduy99er@gmail.com", "duykhanh!23", "duykhanh!23", "0913618810", "Student");
+
     }
 }

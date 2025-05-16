@@ -17,9 +17,9 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown() throws InterruptedException {
         if (driver != null) {
-            driver.quit();
+            System.out.println("Waiting!!!");
         }
     }
 }

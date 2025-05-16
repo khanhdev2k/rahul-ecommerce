@@ -1,0 +1,5 @@
+allure:
+  report:
+    title: Selenium Test Report
+  logo:
+    enabled: false
